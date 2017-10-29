@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="../src/dialog.css">
+    <style>
+        html,body{margin: 0; padding: 0; height: 100%;}
+    </style>
+</head>
+<body>
+    <button onclick="showDialog()">弹出Dialog</button>
+    <script type="text/javascript" src="../src/dialog.js"></script>
+    <script type="text/javascript">
+    var myDialog;
+    function showDialog (argument) {
+        myDialog = Dialog({
+            content: '我是Dialog',
+            onOk: function() {
+                return false;
+            },
+            onBoxClick: 'ok'
+        });
+    }
+    </script>
+</body>
+</html>
